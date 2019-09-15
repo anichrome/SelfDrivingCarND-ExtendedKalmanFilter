@@ -4,7 +4,15 @@
 #include "Eigen/Dense"
 
 class KalmanFilter {
- public:
+ 
+  private:
+    /**
+  *   Repeated calculations for KF and EKF.
+  *   @param y.
+  */
+  void UpdateWithY(const Eigen::VectorXd &y);
+  
+  public:
   /**
    * Constructor
    */
